@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+function alertDismissed() {
+    // do something
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -35,7 +39,14 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        document.getElementById("a").onclick = function() { alert("zwykly alert"); };
+        document.getElementById("a").onclick = function() { 
+navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
+ };
         document.getElementById("t").value="wartosc";
     },
     // Update DOM on a Received Event

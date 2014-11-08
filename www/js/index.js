@@ -36,7 +36,7 @@ var app = {
         app.receivedEvent('deviceready');
 
         document.getElementById("a").onclick = function() { alert("zwykly alert"); };
-        document.getElementById("a").value="wartosc";
+        document.getElementById("t").value="wartosc";
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
